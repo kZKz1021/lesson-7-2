@@ -15,12 +15,12 @@ basic.forever(function () {
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
         strip.show()
     } else if (pins.digitalReadPin(DigitalPin.P1) == 0 || pins.digitalReadPin(DigitalPin.P2) == 0) {
-        wuKong.setAllMotor(100, 0)
+        wuKong.setAllMotor(50, 0)
         basic.pause(2000)
         strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
         strip.show()
     } else if (pins.digitalReadPin(DigitalPin.P1) == 1 && pins.digitalReadPin(DigitalPin.P2) == 0) {
-        wuKong.setAllMotor(-100, -100)
+        wuKong.setAllMotor(80, 0)
         basic.pause(2000)
         strip.showColor(neopixel.colors(NeoPixelColors.Orange))
         strip.show()
