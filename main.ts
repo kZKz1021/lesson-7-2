@@ -19,29 +19,15 @@ basic.forever(function () {
         basic.pause(2000)
         strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
         strip.show()
-    } else if (pins.digitalReadPin(DigitalPin.P1) == 1 && pins.digitalReadPin(DigitalPin.P2) == 0) {
-        wuKong.setAllMotor(80, 0)
-        basic.pause(2000)
-        strip.showColor(neopixel.colors(NeoPixelColors.Orange))
-        strip.show()
-    } else if (pins.digitalReadPin(DigitalPin.P1) == 0 && pins.digitalReadPin(DigitalPin.P2) == 1) {
-        wuKong.setAllMotor(0, 80)
-        basic.pause(1000)
-        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
-        strip.show()
     } else if (sonarbit.sonarbit_distance(Distance_Unit.Distance_Unit_cm, DigitalPin.P8) > 0 && sonarbit.sonarbit_distance(Distance_Unit.Distance_Unit_cm, DigitalPin.P8) <= 15) {
-        wuKong.setAllMotor(100, 100)
+        wuKong.setAllMotor(48, 100)
         basic.pause(2000)
         strip.showColor(neopixel.colors(NeoPixelColors.Red))
         strip.show()
     } else if (sonarbit.sonarbit_distance(Distance_Unit.Distance_Unit_cm, DigitalPin.P8) > 15 && sonarbit.sonarbit_distance(Distance_Unit.Distance_Unit_cm, DigitalPin.P8) <= 30) {
-        wuKong.setAllMotor(-100, -100)
+        wuKong.setAllMotor(100, 100)
         basic.pause(2000)
         strip.showColor(neopixel.colors(NeoPixelColors.Green))
-        strip.show()
-    } else {
-        wuKong.setAllMotor(100, 0)
-        strip.showColor(neopixel.colors(NeoPixelColors.White))
         strip.show()
     }
 })
